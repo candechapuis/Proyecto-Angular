@@ -1,0 +1,14 @@
+<h1>Proyecto 1</h1>
+<h2>Angular</h2>
+<div class = "boton" *ngIf = "!listaStock"> 
+    <button mat-flat-button color="primary" (click) = "mostrarLista()">Ver la lista de productos</button>
+</div>
+<div class = "boton" *ngIf = "listaStock"> 
+    <button mat-flat-button color="primary" (click) = "mostrarLista()">Esconder la lista de productos</button>
+        <div class="lista" *ngFor ="let productos of stock">
+            <ul>
+                <li> {{productos.nombre}} - {{productos.costo}} </li>
+            </ul>
+        </div>
+</div>
+
